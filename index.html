@@ -25,7 +25,7 @@
                 <h4 class="header-subtitle" >Hello, I am</h4>
                 <h1 class="header-title">Daniel I.K</h1>
                 <h6 class="header-mono" >Quality Assurance Engineer</h6>
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <button onclick="downloadImg()" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume </button>
             </div>
         </div>
     </header>
@@ -575,6 +575,20 @@
 
     <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
+
+    <script>
+        function downloadImg() {
+            console.log("test")
+            var imgURL = "../assets/CVDaniel.png"; // Replace with the actual image URL
+          
+          var a = document.createElement("a");
+          a.href = imgURL;
+          a.download = "image.jpg";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }
+      </script>
 
 </body>
 </html>
